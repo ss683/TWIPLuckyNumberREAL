@@ -1,0 +1,45 @@
+package com.company;
+
+import java.util.Scanner;
+public class Main {
+    private static int response2;
+    public static void main(String[] args) {
+        while (true) {
+            perfectRandom perfectRandom = new perfectRandom();
+
+            Scanner input = new Scanner(System.in);
+
+            System.out.println("What is your name?");
+            String response = input.nextLine();
+                int i = perfectRandom.RNG();
+                System.out.println("Nice to meet you " + response + "! Your lucky number is " + i + "!");
+                System.out.println("");
+            while (true) {
+                System.out.println("What do you want to do next?: '0' to Exit, '1' to show your Name and Lucky Number, or '2' to enter another Name and get another Lucky Number.");
+               response2 = input.nextInt();
+
+                if (response2 == 1) {
+                    System.out.println("");
+                    System.out.println("Your name: " + response);
+                    System.out.println("Your lucky number: " + i);
+                    System.out.println("");
+                } else if (response2 == 0) {
+                    System.out.println("");
+                    System.out.println("You have exited.");
+                    break;
+                } else if (response2 == 2) {
+                    System.out.println("");
+                    break;
+                }
+            }
+            if(response2 == 0)
+            {
+                break;
+            }
+            if(response2 == 2)
+            {
+                continue;
+            }
+        }
+    }
+}

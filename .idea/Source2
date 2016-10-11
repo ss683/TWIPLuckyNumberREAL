@@ -1,0 +1,23 @@
+package com.company;
+
+/**
+ * Created by Shane on 10/11/2016.
+ */
+public class perfectRandom {
+
+    public perfectRandom()
+    {
+        x = 0;
+    }
+
+    public int x;
+    public int random1;
+
+    public int RNG() {
+        double c = (Math.random() * 10) + 1;
+        double d = (int)c;
+        random1 = (int)Math.pow(d , 2);
+        return random1;
+    }
+}
+
